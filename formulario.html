@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos Personales</title>
+    <link rel="stylesheet" href="style.css" id="standard-style">
+    <link rel="stylesheet" href="high-contrast.css" id="high-contrast-style" disabled>
+    <style>
+        /* Ocultar el botón de Estilo Normal por defecto */
+        #btn-normal {
+            display: none;
+        }
+    </style>
+    <script src="valid.js"></script>
+</head>
+<body>
+    <h1>Datos Personales</h1>
+    <form id="personal-data-form">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+        <div class="form-group">
+            <label for="paisResidencia">País de residencia:</label>
+            <input type="text" id="paisResidencia" name="paisResidencia" required>
+        </div>
+        <button type="submit">Enviar</button>
+        <button type="button" onclick="toggleContrast()">Alto Contraste</button>
+        <button type="button" id="btn-normal" onclick="toggleNormal()">Estilo Normal</button>
+    </form>
+    </body>
+</html>
